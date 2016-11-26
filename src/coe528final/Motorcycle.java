@@ -16,7 +16,7 @@ public class Motorcycle implements VehicleType {
     private String Transmission;
     private int Wheels;
     private boolean Status;
-    private boolean Suspension;
+    private boolean specialFeature;
 
     /**
      * 
@@ -35,69 +35,82 @@ public class Motorcycle implements VehicleType {
         this.Transmission = Transmission;
         this.Wheels = Wheels;
         this.Status = Status;
-        this.Suspension = specialFeature;
+        this.specialFeature = specialFeature;
     }
 
     /**
      * 
      * @return 
      */
-    public boolean isSuspension() {
-        return Suspension;
+    public boolean isspecialFeature() {
+        return specialFeature;
     }
 
     /**
      * 
      * @param Suspension 
      */
-    public void setSuspension(boolean Suspension) {
-        this.Suspension = Suspension;
+    @Override
+    public void setspecialFeature(boolean Suspension) {
+        this.specialFeature = Suspension;
     }
 
+    @Override
     public String getOwner() {
         return Owner;
     }
 
+    @Override
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
+    @Override
     public String getModel() {
         return Model;
     }
 
+    @Override
     public void setModel(String Model) {
         this.Model = Model;
     }
 
+    @Override
     public String getColor() {
         return Color;
     }
 
+    @Override
     public void setColor(String Color) {
         this.Color = Color;
     }
 
+    @Override
     public String getTransmission() {
         return Transmission;
     }
 
+    @Override
     public void setTransmission(String Transmission) {
         this.Transmission = Transmission;
     }
 
+    @Override
     public int getWheels() {
         return Wheels;
     }
 
+    @Override
     public void setWheels(int Wheels) {
         this.Wheels = Wheels;
     }
 
+    @Override
     public boolean isStatus() {
         return Status;
     }
-
+    
+    @Override
     public void setStatus(boolean Status) {
         this.Status = Status;
     }
@@ -110,7 +123,7 @@ public class Motorcycle implements VehicleType {
     public String toString(){
         return ("Vehicle Type: Car, Owner: " + getOwner() + ", Model: " + getModel() 
                 + ", Color: " + getColor() + ", Transmission: " + getTransmission() 
-                + ", # of Wheels: " + getWheels() + ", Parking Status: " + isStatus() + ", Special Feature: " + isSuspension());
+                + ", # of Wheels: " + getWheels() + ", Parking Status: " + isStatus() + ", Special Feature: " + isspecialFeature());
     }
     
     /**

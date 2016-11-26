@@ -16,7 +16,7 @@ public class Truck implements VehicleType{
     private String Transmission;
     private int Wheels;
     private boolean Status;
-    private boolean Container;
+    private boolean specialFeature;
 
     /**
      * 
@@ -35,82 +35,87 @@ public class Truck implements VehicleType{
         this.Transmission = Transmission;
         this.Wheels = Wheels;
         this.Status = Status;
-        this.Container = specialFeature;
+        this.specialFeature = specialFeature;
     }
 
-    /**
-     * 
-     * @return 
-     */
-    public boolean isContainer() {
-        return Container;
-    }
-
-    /**
-     * 
-     * @param Container 
-     */
-    public void setContainer(boolean Container) {
-        this.Container = Container;
-    }
-
+    @Override
     public String getOwner() {
         return Owner;
     }
 
+    @Override
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
+    @Override
     public String getModel() {
         return Model;
     }
 
+    @Override
     public void setModel(String Model) {
         this.Model = Model;
     }
 
+    @Override
     public String getColor() {
         return Color;
     }
 
+    @Override
     public void setColor(String Color) {
         this.Color = Color;
     }
 
+    @Override
     public String getTransmission() {
         return Transmission;
     }
 
+    @Override
     public void setTransmission(String Transmission) {
         this.Transmission = Transmission;
     }
 
+    @Override
     public int getWheels() {
         return Wheels;
     }
 
+    @Override
     public void setWheels(int Wheels) {
         this.Wheels = Wheels;
     }
 
+    @Override
     public boolean isStatus() {
         return Status;
     }
 
+    @Override
     public void setStatus(boolean Status) {
         this.Status = Status;
     }
 
-    /**
-     * 
-     * @return 
-     */
+    @Override
+    public boolean isspecialFeature() {
+        return specialFeature;
+    }
+
+    @Override
+    public void setspecialFeature(boolean specialFeature) {
+        this.specialFeature = specialFeature;
+    }
+
+
+
+
     @Override
     public String toString(){
         return ("Vehicle Type: Car, Owner: " + getOwner() + ", Model: " + getModel() 
                 + ", Color: " + getColor() + ", Transmission: " + getTransmission() 
-                + ", # of Wheels: " + getWheels() + ", Parking Status: " + isStatus() + ", Special Feature: " + isContainer());
+                + ", # of Wheels: " + getWheels() + ", Parking Status: " + isStatus() + ", Special Feature: " + isspecialFeature());
     }
     
     /**
@@ -122,4 +127,7 @@ public class Truck implements VehicleType{
         if (Wheels < 0) return false;
         return true;
     }
+
+
+
 }

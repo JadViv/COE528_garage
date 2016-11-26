@@ -17,4 +17,31 @@ public interface VehicleType {
     int Wheels = -1;
     boolean Status = false;
     boolean specialFeature = false;
+
+    String getOwner();
+    String getModel();
+    String getColor();
+    String getTransmission();
+    int getWheels();
+    boolean isStatus();
+    boolean isspecialFeature();
+    
+    public void setOwner(String Owner);
+    public void setModel(String Model);
+    public void setColor(String Color);
+    public void setTransmission(String Transmission);
+    public void setWheels(int Wheels);
+    public void setStatus(boolean Status);
+    public void setspecialFeature(boolean specialFeature);
+    
+    @Override
+    public String toString();
+
+    @Override
+    public boolean equals(Object obj);
+
+    @Override
+    public int hashCode();
+    
+
 }
